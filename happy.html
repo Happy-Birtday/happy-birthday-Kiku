@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="happy.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">♥ Happy Birthday Kiku</div>
+  </header>
+
+  <!-- Page Content Wrapper -->
+  <main class="page-wrapper">
+    
+    <!-- Pink Outer Canvas -->
+    <div class="pink-card">
+      
+      <!-- Center Layout Container -->
+      <div class="card-content">
+        
+        <!-- Stacked Letter / Note Container -->
+        <div class="note-stack">
+          <div class="stamp-bg"></div>
+          <div class="letter-paper">
+            <p class="letter-text">
+              happy birthday to my favorite Kiku 🤍<br><br>
+              thank you for making life feel softer, lighter, and happier. 
+              i hope today gives you the same love and warmth you always give to everyone around you 🌸
+            </p>
+          </div>
+          <!-- Flower Accent -->
+          <div class="flower-accent">🌸🌷</div>
+        </div>
+
+        <!-- Right Side Polaroid Frame -->
+        <div class="polaroid-wrapper">
+          <div class="polaroid-frame">
+            <div class="photo-box">
+              <img src="Photo9.jpg" alt="Memory Photo">
+            </div>
+          </div>
+          <!-- Star Sticker Accent -->
+          <div class="star-accent">⭐</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Action Buttons Row -->
+    <div class="button-group">
+      <!-- Big Heart Action Button -->
+      <button id="heartBtn" class="heart-btn" aria-label="Send Hearts">💖</button>
+
+      <!-- Back to Home Button -->
+      <button id="backBtn" class="back-btn">BACK 🏠</button>
+    </div>
+
+  </main>
+
+  <!-- Container for Floating Hearts Animation -->
+  <div id="heartContainer" class="heart-container"></div>
+
+  <script>
+    const heartBtn = document.getElementById('heartBtn');
+    const heartContainer = document.getElementById('heartContainer');
+    const backBtn = document.getElementById('backBtn');
+
+    // Array of heart emojis
+    const heartTypes = ['💖', '❤️', '💕', '💗', '🌸', '✨', '🤍'];
+
+    heartBtn.addEventListener('click', () => {
+      // Generate multiple floating hearts across the screen
+      for (let i = 0; i < 40; i++) {
+        setTimeout(() => {
+          createHeart();
+        }, i * 40);
+      }
+    });
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('floating-heart');
+      
+      heart.innerText = heartTypes[Math.floor(Math.random() * heartTypes.length)];
+      
+      const startX = Math.random() * 100;
+      const size = Math.random() * 25 + 20;
+      const duration = Math.random() * 2 + 2;
+
+      heart.style.left = `${startX}vw`;
+      heart.style.fontSize = `${size}px`;
+      heart.style.animationDuration = `${duration}s`;
+
+      heartContainer.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, duration * 1000);
+    }
+
+    // Back button redirect to Home page
+    backBtn.addEventListener('click', () => {
+      window.location.href = 'index.html'; // Change to 'index.html' if that is your homepage file name
+    });
+  </script>
+
+</body>
+</html>

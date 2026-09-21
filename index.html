@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">♥ Happh Birthday Kiku</div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-container">
+      
+      <div class="envelope-wrapper" id="envelope">
+        <div class="envelope">
+          <div class="flap"></div>
+          <div class="seal">🌸</div>
+        </div>
+        <p class="subtext">Tap the envelope for your surprise...</p>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    const envelope = document.getElementById('envelope');
+
+    // Click envelope to navigate directly to page 2
+    envelope.addEventListener('click', () => {
+      envelope.classList.add('opened');
+      setTimeout(() => {
+        window.location.href = 'love.html';
+      }, 300);
+    });
+  </script>
+
+</body>
+</html>

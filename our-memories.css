@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e0527b;
+  letter-spacing: 1.5px;
+}
+
+/* Page Vertical Layout Wrapper */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 10px 20px 40px;
+  gap: 25px;
+}
+
+/* Pink Main Card Container */
+.pink-card {
+  width: 100%;
+  background-color: #f38da1;
+  border-radius: 20px;
+  padding: 30px 20px 40px;
+  box-shadow: 0 15px 35px rgba(224, 82, 123, 0.25);
+  text-align: center;
+}
+
+/* White Cursive Title */
+.memories-title {
+  font-family: 'Dancing Script', cursive;
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Staggered Photo Grid Layout */
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px 15px;
+  align-items: center;
+  justify-items: center;
+  padding: 10px;
+}
+
+/* Individual Framed Photo Styling */
+.photo-frame {
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 6px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 130px;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.25 ease;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+  display: block;
+}
+
+.photo-frame:hover {
+  transform: scale(1.05);
+}
+
+/* Slight staggered offsets for organic look like video screenshot */
+.p1 { transform: translateY(-5px); }
+.p2 { transform: translateY(12px); }
+.p3 { transform: translateY(-8px); }
+.p4 { transform: translateY(10px); }
+.p5 { transform: translateY(8px); }
+.p6 { transform: translateY(-10px); }
+.p7 { transform: translateY(6px); }
+.p8 { transform: translateY(-6px); }
+
+/* Bottom Centered Next Button */
+.next-btn {
+  width: 100%;
+  max-width: 320px;
+  background: linear-gradient(135deg, #e0527b, #c93b65);
+  color: #ffffff;
+  border: none;
+  padding: 14px 0;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(224, 82, 123, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(224, 82, 123, 0.4);
+}
+
+/* Responsive Grid for Smaller Screens */
+@media (max-width: 600px) {
+  .memory-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .memories-title {
+    font-size: 34px;
+  }
+}

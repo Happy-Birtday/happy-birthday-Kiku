@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Memories</title>
+  <link rel="stylesheet" href="our-memories.css">
+  <!-- Cursive font for the title -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">♥ Happy Birthday Kiku</div>
+  </header>
+
+  <!-- Main Page Wrapper -->
+  <main class="page-wrapper">
+    
+    <!-- Pink Memories Canvas Box -->
+    <div class="pink-card">
+      <h1 class="memories-title">Our Memories</h1>
+
+      <!-- Photo Grid Collage -->
+      <div class="memory-grid">
+        <div class="photo-frame p1"><img src="Photo1.jpg" alt="Memory 1"></div>
+        <div class="photo-frame p2"><img src="Photo2.jpg" alt="Memory 2"></div>
+        <div class="photo-frame p3"><img src="Photo3.jpg" alt="Memory 3"></div>
+        <div class="photo-frame p4"><img src="Photo4.jpg" alt="Memory 4"></div>
+        <div class="photo-frame p5"><img src="Photo5.jpg" alt="Memory 5"></div>
+        <div class="photo-frame p6"><img src="Photo10.jpg" alt="Memory 6"></div>
+        <div class="photo-frame p7"><img src="Photo7.jpg" alt="Memory 7"></div>
+        <div class="photo-frame p8"><img src="Photo8.jpg" alt="Memory 8"></div>
+      </div>
+    </div>
+
+    <!-- Centered Bottom Next Button -->
+    <button id="nextBtn" class="next-btn">NEXT 🌸</button>
+
+  </main>
+
+  <script>
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      window.location.href = 'song.html';
+    });
+  </script>
+
+</body>
+</html>

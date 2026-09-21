@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="love.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">♥ Happy Birthday Kiku</div>
+  </header>
+
+  <main class="content-container">
+    
+    <div class="flower-frame">
+      <div class="image-card">
+        <img src="Photo1.jpg" alt="Birthday Girl" class="hero-img">
+        
+        <div class="text-overlay">
+          <h1 class="main-heading">HAPPY BIRTHDAY</h1>
+          <span class="sub-heading">KIKU</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-section">
+      <div class="teddy-accent">🧸</div>
+      <button id="nextBtn" class="next-btn">NEXT 🌸</button>
+    </div>
+
+  </main>
+
+  <script>
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      window.location.href = 'letter.html';
+    });
+  </script>
+
+</body>
+</html>
